@@ -51,7 +51,7 @@ namespace hippodrome
         ///// <returns>un objet de type datatable contenant les données récupérées</returns>
         public DataTable ObtenirCourses()
         {
-            String req = "select * from course";
+            String req = "select * from course order by hippodrome";
             this.cde = new SqlCommand(req, cn);
             da = new SqlDataAdapter();
             da.SelectCommand = this.cde;
@@ -83,7 +83,19 @@ namespace hippodrome
             {
                 dt.RejectChanges();  // on annule l ajout dans la dataTable car il s'est mal passé
                 throw new Exception(" Erreur suppression SqlServeur  \n" + ex.Message);
-            }
+            }            
+        }
+        public DataTable ObtenirResultatCourse(string pidcourse)
+        {
+            //ecrit par Habacchi Anthony
+            String req = "select cheval.id,hippodrome,place from cheval,participe where cheval.id=idche and idcourse=@punidcourse";
+            this.cde = new SqlCommand(req, cn);
+            this.cde.Parameters.Add("@unidcourse", SqlDbType.VarChar).Value = pidcourse;
+            da = new SqlDataAdapter();
+            da.SelectCommand = this.cde;
+            dt = new DataTable();
+            da.Fill(dt);
+            return dt;
         }
     }
 }

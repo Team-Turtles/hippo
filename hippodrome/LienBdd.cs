@@ -84,6 +84,11 @@ namespace hippodrome
                 throw new Exception(" Erreur suppression SqlServeur  \n" + ex.Message);
             }
         }
+
+        public void ObtResultGlob(DateTime date1, DateTime date2)
+        {
+ 
+        }
     }
 }
      

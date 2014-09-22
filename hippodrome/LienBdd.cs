@@ -8,7 +8,7 @@ namespace hippodrome
 {
     class LienBdd
     {
-        //
+        // fabien ne sert a rien
         // propriétés membres
         //
         // test modif

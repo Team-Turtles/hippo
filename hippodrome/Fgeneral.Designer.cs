@@ -44,6 +44,8 @@
             this.dgCourses = new System.Windows.Forms.DataGridView();
             this.tabgeneral = new System.Windows.Forms.TabControl();
             this.tabCheval = new System.Windows.Forms.TabPage();
+            this.tabResult = new System.Windows.Forms.TabPage();
+            this.tabResultatGlob = new System.Windows.Forms.TabPage();
             this.tabCourse.SuspendLayout();
             this.gbDetailCourse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCourses)).BeginInit();
@@ -194,6 +196,8 @@
             // 
             this.tabgeneral.Controls.Add(this.tabCheval);
             this.tabgeneral.Controls.Add(this.tabCourse);
+            this.tabgeneral.Controls.Add(this.tabResult);
+            this.tabgeneral.Controls.Add(this.tabResultatGlob);
             this.tabgeneral.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabgeneral.Location = new System.Drawing.Point(4, 5);
             this.tabgeneral.Name = "tabgeneral";
@@ -211,6 +215,26 @@
             this.tabCheval.TabIndex = 0;
             this.tabCheval.Text = "Les chevaux";
             this.tabCheval.UseVisualStyleBackColor = true;
+            // 
+            // tabResult
+            // 
+            this.tabResult.Location = new System.Drawing.Point(4, 28);
+            this.tabResult.Name = "tabResult";
+            this.tabResult.Padding = new System.Windows.Forms.Padding(3);
+            this.tabResult.Size = new System.Drawing.Size(1043, 472);
+            this.tabResult.TabIndex = 2;
+            this.tabResult.Text = "Resultats";
+            this.tabResult.UseVisualStyleBackColor = true;
+            // 
+            // tabResultatGlob
+            // 
+            this.tabResultatGlob.Location = new System.Drawing.Point(4, 28);
+            this.tabResultatGlob.Name = "tabResultatGlob";
+            this.tabResultatGlob.Padding = new System.Windows.Forms.Padding(3);
+            this.tabResultatGlob.Size = new System.Drawing.Size(1043, 472);
+            this.tabResultatGlob.TabIndex = 3;
+            this.tabResultatGlob.Text = "Resultats Globaux";
+            this.tabResultatGlob.UseVisualStyleBackColor = true;
             // 
             // Fgeneral
             // 
@@ -248,6 +272,8 @@
         private System.Windows.Forms.DataGridView dgCourses;
         private System.Windows.Forms.TabControl tabgeneral;
         private System.Windows.Forms.TabPage tabCheval;
+        private System.Windows.Forms.TabPage tabResult;
+        private System.Windows.Forms.TabPage tabResultatGlob;
 
     }
 }

@@ -86,6 +86,29 @@ namespace hippodrome
                 throw new Exception(" Erreur suppression SqlServeur  \n" + ex.Message);
             }
         }
+
+        public DataTable ObtenirCheval()
+        {
+            String req = "select * from cheval order by nomche";
+            this.cde = new SqlCommand(req, cn);
+            da = new SqlDataAdapter();
+            da.SelectCommand = this.cde;
+            dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        public DataTable ObtenirResultatCheval(string Pid)
+        {
+            String req = "select nomche, place, course.id from cheval, participe, course where cheval.id = idche and idcourse = course.id and idche = @unidcheval";
+            this.cde = new SqlCommand(req, cn);
+            this.cde.Parameters.Add("@unidcheval", SqlDbType.VarChar).Value = Pid;
+            da = new SqlDataAdapter();
+            da.SelectCommand = this.cde;
+            dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
     }
 }
      

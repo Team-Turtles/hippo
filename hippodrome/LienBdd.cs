@@ -4,6 +4,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+// Troll farceur et elfe farcit
 namespace hippodrome
 {
     class LienBdd

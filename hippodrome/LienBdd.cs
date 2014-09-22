@@ -100,6 +100,7 @@ namespace hippodrome
 
         public DataTable ObtenirResultatCheval(string Pid)
         {
+            //Bla
             String req = "select nomche, place, course.id from cheval, participe, course where cheval.id = idche and idcourse = course.id and idche = @unidcheval";
             this.cde = new SqlCommand(req, cn);
             this.cde.Parameters.Add("@unidcheval", SqlDbType.VarChar).Value = Pid;

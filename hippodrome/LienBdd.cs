@@ -18,9 +18,9 @@ namespace hippodrome
         private DataTable dt;
         //
         // méthodes
-        // j'vous encule tous, ma pute fait le couscous
+        // couscous
         /// <summary>
-        /// constructeur de la connexion
+        /// constructeur de la connexio
         /// </summary>
         public LienBdd()
         {

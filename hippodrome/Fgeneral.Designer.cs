@@ -46,21 +46,21 @@
             this.tabCheval = new System.Windows.Forms.TabPage();
             this.tabResult = new System.Windows.Forms.TabPage();
             this.tabResultatGlob = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.gbResGlob = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btShearch = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.dgResultGlob = new System.Windows.Forms.DataGridView();
+            this.gbResGlob = new System.Windows.Forms.GroupBox();
+            this.btShearch = new System.Windows.Forms.Button();
+            this.dtpDate2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpDate1 = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabCourse.SuspendLayout();
             this.gbDetailCourse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCourses)).BeginInit();
             this.tabgeneral.SuspendLayout();
             this.tabResultatGlob.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgResultGlob)).BeginInit();
             this.gbResGlob.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabCourse
@@ -240,7 +240,7 @@
             // tabResultatGlob
             // 
             this.tabResultatGlob.Controls.Add(this.label3);
-            this.tabResultatGlob.Controls.Add(this.dataGridView1);
+            this.tabResultatGlob.Controls.Add(this.dgResultGlob);
             this.tabResultatGlob.Controls.Add(this.gbResGlob);
             this.tabResultatGlob.Location = new System.Drawing.Point(4, 28);
             this.tabResultatGlob.Name = "tabResultatGlob";
@@ -249,69 +249,6 @@
             this.tabResultatGlob.TabIndex = 3;
             this.tabResultatGlob.Text = "Parametres";
             this.tabResultatGlob.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Premiere Date ";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 19);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Segonde Date ";
-            // 
-            // gbResGlob
-            // 
-            this.gbResGlob.Controls.Add(this.btShearch);
-            this.gbResGlob.Controls.Add(this.dateTimePicker2);
-            this.gbResGlob.Controls.Add(this.dateTimePicker1);
-            this.gbResGlob.Controls.Add(this.label2);
-            this.gbResGlob.Controls.Add(this.label1);
-            this.gbResGlob.Location = new System.Drawing.Point(6, 6);
-            this.gbResGlob.Name = "gbResGlob";
-            this.gbResGlob.Size = new System.Drawing.Size(377, 156);
-            this.gbResGlob.TabIndex = 6;
-            this.gbResGlob.TabStop = false;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(128, 32);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(234, 27);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(128, 65);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(234, 27);
-            this.dateTimePicker2.TabIndex = 5;
-            // 
-            // btShearch
-            // 
-            this.btShearch.Location = new System.Drawing.Point(20, 104);
-            this.btShearch.Name = "btShearch";
-            this.btShearch.Size = new System.Drawing.Size(342, 34);
-            this.btShearch.TabIndex = 6;
-            this.btShearch.Text = "Rechercher";
-            this.btShearch.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(469, 71);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(568, 395);
-            this.dataGridView1.TabIndex = 7;
             // 
             // label3
             // 
@@ -323,6 +260,70 @@
             this.label3.Size = new System.Drawing.Size(70, 19);
             this.label3.TabIndex = 8;
             this.label3.Text = "Resultats";
+            // 
+            // dgResultGlob
+            // 
+            this.dgResultGlob.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgResultGlob.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgResultGlob.Location = new System.Drawing.Point(469, 71);
+            this.dgResultGlob.Name = "dgResultGlob";
+            this.dgResultGlob.Size = new System.Drawing.Size(568, 395);
+            this.dgResultGlob.TabIndex = 7;
+            // 
+            // gbResGlob
+            // 
+            this.gbResGlob.Controls.Add(this.btShearch);
+            this.gbResGlob.Controls.Add(this.dtpDate2);
+            this.gbResGlob.Controls.Add(this.dtpDate1);
+            this.gbResGlob.Controls.Add(this.label2);
+            this.gbResGlob.Controls.Add(this.label1);
+            this.gbResGlob.Location = new System.Drawing.Point(6, 6);
+            this.gbResGlob.Name = "gbResGlob";
+            this.gbResGlob.Size = new System.Drawing.Size(377, 156);
+            this.gbResGlob.TabIndex = 6;
+            this.gbResGlob.TabStop = false;
+            // 
+            // btShearch
+            // 
+            this.btShearch.Location = new System.Drawing.Point(20, 104);
+            this.btShearch.Name = "btShearch";
+            this.btShearch.Size = new System.Drawing.Size(342, 34);
+            this.btShearch.TabIndex = 6;
+            this.btShearch.Text = "Rechercher";
+            this.btShearch.UseVisualStyleBackColor = true;
+            this.btShearch.Click += new System.EventHandler(this.btShearch_Click);
+            // 
+            // dtpDate2
+            // 
+            this.dtpDate2.Location = new System.Drawing.Point(128, 65);
+            this.dtpDate2.Name = "dtpDate2";
+            this.dtpDate2.Size = new System.Drawing.Size(234, 27);
+            this.dtpDate2.TabIndex = 5;
+            // 
+            // dtpDate1
+            // 
+            this.dtpDate1.Location = new System.Drawing.Point(128, 32);
+            this.dtpDate1.Name = "dtpDate1";
+            this.dtpDate1.Size = new System.Drawing.Size(234, 27);
+            this.dtpDate1.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 71);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Segonde Date ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Premiere Date ";
             // 
             // Fgeneral
             // 
@@ -340,9 +341,9 @@
             this.tabgeneral.ResumeLayout(false);
             this.tabResultatGlob.ResumeLayout(false);
             this.tabResultatGlob.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgResultGlob)).EndInit();
             this.gbResGlob.ResumeLayout(false);
             this.gbResGlob.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -368,11 +369,11 @@
         private System.Windows.Forms.TabPage tabResult;
         private System.Windows.Forms.TabPage tabResultatGlob;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgResultGlob;
         private System.Windows.Forms.GroupBox gbResGlob;
         private System.Windows.Forms.Button btShearch;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpDate2;
+        private System.Windows.Forms.DateTimePicker dtpDate1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
 

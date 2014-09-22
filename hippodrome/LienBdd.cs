@@ -85,7 +85,9 @@ namespace hippodrome
             }
         }
 
-        public void ObtResultGlob(DateTime date1, DateTime date2)
+
+        //fonction qui retourne les resutats entre deux dates (michael)
+        public DataTable ObtResultGlob(DateTime date1, DateTime date2)
         {
             String req = "select nomche,idcourse,date,place from participe, cheval che, course cou where che.id = idche and cou.id = idcourse and month(date) between @mois1 and @mois2 and year(date) between @annee1 and @annee2";
             this.cde = new SqlCommand(req, cn);
@@ -93,7 +95,13 @@ namespace hippodrome
             cde.Parameters.Add("@mois2", SqlDbType.Int).Value = date2.Month;
             cde.Parameters.Add("@annee1", SqlDbType.Int).Value = date1.Year;
             cde.Parameters.Add("@annee2", SqlDbType.Int).Value = date2.Year;
+            
             da = new SqlDataAdapter();
+            da.SelectCommand = this.cde;
+            dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
         }
     }
 }

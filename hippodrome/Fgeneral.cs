@@ -67,6 +67,16 @@ namespace hippodrome
         private void btAjoutCourse_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //********************************RESULTATS GLOBAUX*********************************************************
+        private void btShearch_Click(object sender, EventArgs e)
+        {
+            dt = uneCn.ObtResultGlob(dtpDate1.Value, dtpDate2.Value);
+            dgResultGlob.DataSource = dt;
+            dgResultGlob.DataMember = dt.TableName;
+            dgResultGlob.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCells);
+
         }              
      }       
     }

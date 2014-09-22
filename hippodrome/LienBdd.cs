@@ -18,7 +18,7 @@ namespace hippodrome
         private DataTable dt;
         //
         // méthodes
-        //
+        // j'vous encule tous, ma pute fait le couscous
         /// <summary>
         /// constructeur de la connexion
         /// </summary>
